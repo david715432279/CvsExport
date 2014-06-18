@@ -8,13 +8,17 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = CvsExport
+TARGET = CsvExport
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    csvpcbfile.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    csvpcbfile.h
 
 FORMS    += mainwindow.ui
+
+LIBS +=  -L/usr/local/lib -lcsv
